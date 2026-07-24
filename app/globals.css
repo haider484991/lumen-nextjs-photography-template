@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+/* Dark mode via class strategy: <html class="dark"> */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Georgia", "Times New Roman", serif;
+
+  /* Quiet, gallery-wall neutrals — the photographs should be the loudest thing. */
+  --color-ink-50: #faf9f7;
+  --color-ink-100: #f2f0ec;
+  --color-ink-200: #e3dfd8;
+  --color-ink-400: #a8a096;
+  --color-ink-600: #5f584f;
+  --color-ink-800: #2a2622;
+  --color-ink-900: #191614;
+  --color-ink-950: #0e0c0b;
+}
+
+/* Scroll-reveal (components/Reveal.tsx) */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.8s cubic-bezier(0.21, 0.47, 0.32, 0.98),
+    transform 0.8s cubic-bezier(0.21, 0.47, 0.32, 0.98);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Masonry gallery. CSS columns keep it dependency-free and reflow-friendly. */
+.masonry {
+  column-gap: 1rem;
+  columns: 1;
+}
+
+@media (min-width: 640px) {
+  .masonry {
+    columns: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .masonry {
+    columns: 3;
+  }
+}
+
+.masonry > * {
+  break-inside: avoid;
+  margin-bottom: 1rem;
+}
+
+/* Form inputs */
+.input {
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 0.7rem 0.9rem;
+  font-size: 0.925rem;
+  color: inherit;
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.input::placeholder {
+  color: currentColor;
+  opacity: 0.4;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--color-ink-600);
+  box-shadow: 0 0 0 3px rgba(95, 88, 79, 0.15);
+}
+
+.dark .input {
+  border-color: rgba(255, 255, 255, 0.16);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
