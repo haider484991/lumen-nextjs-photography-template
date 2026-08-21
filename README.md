@@ -3,6 +3,7 @@
 **A production-ready photography portfolio template built with Next.js 15, TypeScript, and Tailwind CSS v4.** Filterable masonry galleries, a keyboard-accessible lightbox, pricing, and a client-proofing page. Clone it, edit one config file, deploy for free.
 
 **[Live demo →](https://pixelandoak-lumen.pages.dev)**
+**[Template page →](https://pixelandoak.com/templates/photography-portfolio-website-template/)**
 
 ![Lumen screenshot](./screenshot.png)
 
@@ -114,5 +115,5 @@ MIT — free for personal and commercial use. Attribution appreciated but not re
 
 ---
 
-Built by [Pixel & Oak](https://pixelandoak.com) — web design and AI development studio.
+Built by [Pixel & Oak](https://pixelandoak.com/templates/photography-portfolio-website-template/) — web design and AI development studio.
 More free templates: [Nova (blog)](https://github.com/haider484991/nova-nextjs-blog-template) · [LaunchPad (SaaS)](https://github.com/haider484991/launchpad-nextjs-saas-template) · [Table & Fork (restaurant)](https://github.com/haider484991/tablefork-nextjs-restaurant-template)

@@ -165,7 +165,11 @@ export const siteConfig = {
     placeholder: "e.g. okonkwo-2026",
   },
 
-  footerNote: "Built with the free Lumen template by Pixel & Oak.",
+  footerNote: "Built with the free Lumen template by",
+  footerCredit: {
+    label: "Pixel & Oak",
+    href: "https://pixelandoak.com/templates/photography-portfolio-website-template/?utm_source=lumen-template",
+  },
 } as const;
 
 export type SiteConfig = typeof siteConfig;

@@ -41,7 +41,17 @@ export default function Footer() {
         <span>
           © {year} {siteConfig.name}. All rights reserved.
         </span>
-        <span>{siteConfig.footerNote}</span>
+        <span>
+          {siteConfig.footerNote}{" "}
+          <a
+            href={siteConfig.footerCredit.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline underline-offset-2"
+          >
+            {siteConfig.footerCredit.label}
+          </a>
+        </span>
       </div>
     </footer>
   );
