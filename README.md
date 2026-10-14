@@ -5,6 +5,8 @@
 **[Live demo →](https://pixelandoak-lumen.pages.dev)**
 **[Template page →](https://pixelandoak.com/templates/photography-portfolio-website-template/)**
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fhaider484991%2Flumen-nextjs-photography-template&project-name=lumen-photography&repository-name=lumen-photography)
+
 ![Lumen screenshot](./screenshot.png)
 
 ## Why this one
